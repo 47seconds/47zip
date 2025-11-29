@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char **argv) {
   if (argc == 1) {
     fprintf(stderr, "ERROR: use 47zip --help for usage\n");
     return EXIT_FAILURE;
@@ -20,7 +20,6 @@ int main(int argc, char *argv[]) {
     return EXIT_FAILURE;
   }
 
-  printf("Operations!\n");
   if (!check_if_exist(argv[2])) {
     fprintf(stderr, "ERROR: $s not exist.\n");
   }
