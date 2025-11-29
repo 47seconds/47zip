@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
     return EXIT_FAILURE;
   }
 
-  if (!check_if_exist(argv[2])) {
+  if (check_if_exist(argv[2]) == -1) {
     fprintf(stderr, "ERROR: %s not exist.\n", argv[2]);
   }
 

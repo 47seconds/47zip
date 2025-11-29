@@ -22,7 +22,7 @@ char *concat_2_char_ptr(char *s1, char *s2, uint32_t size) {
   return output;
 }
 
-// one bug: if filename near 256 and .47a already there, then final name could be glichy like abc..z.47.47z
+// one bug (?? debatable): if filename near 256 and .47a already there, then final name could be glichy like abc..z.47.47z
 char *add_extension(char *str, char* ext) {
   const uint32_t total_size = strlen(str) + strlen(ext);
   uint32_t size = total_size >= NAME_BUFFER_SIZE ? (uint32_t)NAME_BUFFER_SIZE : total_size;
