@@ -4,6 +4,17 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
+struct stat get_file_metadata(char *file_path) {
+  struct stat st;
+
+  if (stat(file_path, &st)) {
+    fprintf(stdout, "ERROR: file or directory %s doesn't exist.\n", file_path);
+    exit(EXIT_FAILURE);
+  }
+
+  return st;
+}
+
 int check_if_exist(char *file_path) {
   struct stat st;
  
