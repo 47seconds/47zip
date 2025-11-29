@@ -1,4 +1,3 @@
-#include "include/files.h"
 #include "include/archiver.h"
 #include "include/zipper.h"
 #include <stdio.h>
@@ -21,10 +20,6 @@ int main(int argc, char **argv) {
   } else if (argc == 2 && !(strcmp(argv[1], "archive") && strcmp(argv[1], "--help"))) {
     fprintf(stderr, "ERROR: filepath missing for %s\n", argv[1]);
     return EXIT_FAILURE;
-  }
-
-  if (check_if_exist(argv[2]) == -1) {
-    fprintf(stderr, "ERROR: %s not exist.\n", argv[2]);
   }
 
   char *output_file = archive_files(argv);
