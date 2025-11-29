@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
   }
 
   if (!check_if_exist(argv[2])) {
-    fprintf(stderr, "ERROR: $s not exist.\n");
+    fprintf(stderr, "ERROR: %s not exist.\n");
   }
 
   return EXIT_SUCCESS;
