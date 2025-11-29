@@ -1,10 +1,10 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11 -Iinclude
 
-SRC = src/<> main.c
+SRC = $(wildcard src/*.c) $(wildcard util/*.c) main.c
 OBJ = $(SRC:.c=.o)
 
-TARGET = app
+TARGET = 47zip
 
 all : $(TARGET)
 
